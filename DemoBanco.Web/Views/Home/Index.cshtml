@@ -1,15 +1,30 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<div class="jumbotron">
+    <h1>Demo Banco</h1>
+    <p class="lead">Para efectos del Mantenimiento no se hizo mucho hincapié en la arquitectura, se realiza las operaciones CRUD en archivos JSON donde se encuentra la data.</p>
+    <h2>Aqui se Muestran los Servicios que se indican en el Ejercicio:</h2>
+    <p>
+        Servicio web en formato JSON que pueda listar todas las órdenes de pago de una sucursales contemplando el filtrado por tipo de moneda.
+    </p>
+    Utilizar POSTMAN o algun otro programa para probar los servicios, ya que chrome mostrara ambos servicios como XML.
+    <p></p>
+    <p><a href="/api/Services/ListOrdenPagoBySucursal/3" target="_blank">Servicio JSON &raquo;</a></p>
+    <p>
+        Servicio web en formato XML que permita buscar todas las sucursales de acuerdo a un banco.
+    </p>
+    <p><a href="/api/Services/ListSucursalByBanco/3" target="_blank">Servicio XML &raquo;</a></p>
 
+</div>
 <div class="row">
     <div class="col-md-4">
-        <h2>Mantenimiento de Bancos</h2>
+        <h2>@Html.ActionLink("Mantenimiento de Bancos", "Index", "Banco")</h2>
     </div>
     <div class="col-md-4">
-        <h2>Mantenimiento de Sucursales</h2>
+        <h2>@Html.ActionLink("Mantenimiento de Sucursales", "Index", "Sucursal")</h2>
     </div>
     <div class="col-md-4">
-        <h2>Mantenimiento de Ordenes de Pago</h2>
+        <h2>@Html.ActionLink("Mantenimiento Ordenes de Pago", "Index", "OrdenPago")</h2>
     </div>
 </div>
